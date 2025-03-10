@@ -100,7 +100,7 @@ function Home() {
           <div className="flex flex-wrap justify-evenly mt-2 gap-5">
             {products.map((a) => (
               <div className="bg-slate-100" key={a.id}>
-                <div className="shadow-lg w-[280px] border p-4 dark:bg-gray-900">
+                <div className="shadow-lg w-[220px] wmd border p-4 dark:bg-gray-900">
                   <Link className="flex justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
@@ -113,13 +113,13 @@ function Home() {
                       {a.title}
                     </p>
                   </Link>
-                  <div className="flex justify-between">
-                    <p className="font-bold py-4 text-orange-500">${a.price}</p>
-                    <p className="font-bold py-4 text-blue-500">
-                      Discount {a.discountPercentage}%
+                  <div className="flex jb justify-between">
+                    <p className="font-bold py-4 fs12 text-orange-500">${a.price}</p>
+                    <p className="font-bold fs12 py-4 text-blue-500">
+                      {a.discountPercentage}% OFF
                     </p>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex justify-center items-center">
                     <button
                       className="cartbutton"
                       onClick={() =>
@@ -142,7 +142,7 @@ function Home() {
                           <circle cx={20} cy={21} r={1} />
                           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                         </svg>
-                        <span>Add to Cart</span>
+                        <span className="fs15">Add to Cart</span>
                       </div>
                       <div className="hover-btn">
                         <svg

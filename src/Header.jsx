@@ -73,7 +73,7 @@ function Header() {
                 </a>
               </Link>
               <div className="flex items-center space-x-6 rtl:space-x-reverse">
-                <div className="flex gap-10">
+                <div className="flex gap-7">
                   <Link to="/cart">
                     <span className="relative">
                       <FaShoppingCart className="text-[30px] text-[#fc394d]" />{" "}

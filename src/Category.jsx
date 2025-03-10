@@ -33,17 +33,18 @@ if (!products) {
         <div className="flex flex-wrap justify-evenly mt-2 gap-5">
           {products.map((a) => (
             <div className="bg-slate-100" key={a.id}>
-              <div className="shadow-lg w-[280px] border p-4 dark:bg-gray-900">
+              <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
                 <div className="flex justify-center">
                   <Link to={`details/${a.id}`}><img className="w-[150px] hover:scale-[1.2] transition duration-500" src={a.thumbnail} alt="" /></Link>
                   </div>
                   <Link to={`details/${a.id}`}><p className="font-bold l1 hover:underline hover:text-blue-700 my-1 dark:text-white">{a.title}</p></Link>
                   <div className="flex justify-between">
-                    <p className="font-bold py-4 text-orange-500">${a.price}</p>
-                    <p className="font-bold py-4 text-blue-500">
-                      Discount {a.discountPercentage}%
+                    <p className="font-bold fs12 py-4 text-orange-500">${a.price}</p>
+                    <p className="font-bold fs12 py-4 text-blue-500">
+                      {a.discountPercentage}% OFF
                     </p>
                   </div>
+                  <div className="flex justify-center items-center">
                   <button className="cartbutton" onClick={()=>dispatch({type: 'addtocart',payload :a})}>
                     <div className="default-btn">
                       <svg
@@ -61,7 +62,7 @@ if (!products) {
                         <circle cx={20} cy={21} r={1} />
                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                       </svg>
-                      <span>Add to Cart</span>
+                      <span className="fs15">Add to Cart</span>
                     </div>
                     <div className="hover-btn">
                       <svg
@@ -78,6 +79,7 @@ if (!products) {
                       <span>{a.price}</span>
                     </div>
                   </button>
+                  </div>
               </div>
             </div>
           ))}

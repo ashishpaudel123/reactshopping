@@ -6,8 +6,8 @@ function Cart() {
   return (
     <>
     <section className="bg-white antialiased dark:bg-gray-900 md:py-4">
-                  <div className="w-[1200px] mx-auto max-w-screen-xl 2xl:px-0">
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
+                  <div className="max-w-[1200px] mx-auto 2xl:px-0">
+                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl mx-2 py-2">Shopping Cart</h2>
                   {state.cart.map((a)=>(
                   <div key={a.id} className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
                     <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">

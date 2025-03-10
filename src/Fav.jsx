@@ -6,8 +6,8 @@ function Fav() {
   return (
     <>
       <section className="bg-white antialiased dark:bg-gray-900 md:py-4">
-        <div className="w-[1200px] mx-auto max-w-screen-xl 2xl:px-0">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+        <div className="max-w-[1200px] mx-auto 2xl:px-0">
+          <h2 className="text-xl mx-2 py-2 font-semibold text-gray-900 dark:text-white sm:text-2xl">
             Yours Favourite
           </h2>
           {state.favorites.map((a) => (

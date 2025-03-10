@@ -78,29 +78,10 @@
   #btn-details{
     width: fit-content;
   }
-
-  /*scrollbar*/
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-  /*scroll bar end*/
+  .os{
+    overflow-x: scroll;
+    overflow: hidden;
+  }
 
   .l1{
     -webkit-line-clamp: 1 !important;
@@ -170,22 +151,31 @@
 header nav{
   width: 100% !important;
 }
+.t0{
+  top: -12px !important;
+}
 
 @media (min-width:315px) and (max-width: 350px){
   .wmd{
     width: 310px !important;
   }
-  
-}
-@media (min-width:350px) and (max-width: 400px){
-  .wmd{
-    width: 350px !important;
+  .jc{
+    justify-content: center !important;
   }
   
 }
-@media (min-width:400px) and (max-width: 459px){
+@media (min-width:350px) and (max-width: 407px){
   .wmd{
-    width: 180px !important;
+    width: 350px !important;
+  }
+  .jc{
+    justify-content: center !important;
+  }
+  
+}
+@media (min-width:408px) and (max-width: 459px){
+  .wmd{
+    width: 195px !important;
   }
   .fs12{
     font-size: 13px !important;
@@ -193,5 +183,42 @@ header nav{
   .fs15{
     font-size: 10px !important;
   }
+  .jc{
+    justify-content: center !important;
+  }
+  .mobile-dn{
+    display: none !important;
+  }
   
 }
+
+@media (min-width:767px) and (max-width: 825px){
+    .fs12{
+      font-size: 14px !important;
+    }  
+}
+
+@media (max-width: 767px){
+  .listmobilegap{
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+  }
+
+}
+@media (min-width:675px) and (max-width:905px) {
+  .mobile-dn:last-child{
+    display: none !important;
+  }
+}
+
+@media (min-width:904px) and (max-width:1128px) {
+  .mobile-dn:last-child{
+    display: none !important;
+  }
+  .mobile-dn:nth-last-child(4){
+    display: none !important;
+  }
+}
+
+
+

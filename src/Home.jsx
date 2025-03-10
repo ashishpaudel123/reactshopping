@@ -5,9 +5,9 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import CartContext from "./CartContext";
 import { Link, Route, Routes } from "react-router-dom";
+import Trending from "./Trending";
 function Home() {
   let { state, dispatch } = useContext(CartContext);
-  // let { state, dispatch } = useContext(FavContext);
   let [cat, setCat] = useState(null);
   let [products, setProducts] = useState(null);
   useEffect(() => {
@@ -48,27 +48,8 @@ function Home() {
   return (
     <>
       <section className="max-w-[1200px] mx-auto">
-        <div className="flex flex-wrap-reverse items-center">
-          <div className="mt-1">
-            <p className="text-center text-white font-bold bg-blue-500 dark:bg-gray-800 p-3">
-              Category List
-            </p>
-            {/* // category list start */}
-            <div className="h-[150px] overflow-auto text-gray-900 bg-white border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-              {cat.map((a) => (
-                <Link to={`/category/${a.slug}`} key={a.slug}>
-                  <button
-                    type="button"
-                    className="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 rounded-t-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
-                  >
-                    {a.name}
-                  </button>
-                </Link>
-              ))}
-            </div>
-            {/* // category list end */}
-          </div>
-          <div className="h-auto max-w-full">
+        {/* swipper start */}
+      <div className="h-auto max-w-full">
             <Swiper
               autoplay={true}
               loop={true}
@@ -78,8 +59,22 @@ function Home() {
             >
               <SwiperSlide>
                 <img
-                  className="h-auto max-w-full"
+                  className="w-full"
                   src="https://img.lazcdn.com/us/domino/9b8200c5-2631-4a4d-b513-2c8d4b4b2196_NP-1976-688.png_2200x2200q80.png"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="w-full"
+                  src="https://img.lazcdn.com/us/domino/45e577c2-561b-4016-b9a7-a594a8ae423d_NP-1976-688.jpg_2200x2200q80.jpg"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="w-full"
+                  src="https://img.lazcdn.com/us/domino/45e577c2-561b-4016-b9a7-a594a8ae423d_NP-1976-688.jpg_2200x2200q80.jpg"
                   alt=""
                 />
               </SwiperSlide>
@@ -92,20 +87,22 @@ function Home() {
               </SwiperSlide>
             </Swiper>
           </div>
-        </div>
+        {/* swipper end */}
+        
+        <Trending/>
 
         {/* All Products */}
         <div>
-          <h2 className="uppercase font-bold mt-2 mx-2">All Products</h2>
-          <div className="flex flex-wrap justify-evenly mt-2 gap-5">
+          <h2 className="uppercase font-bold m-2">All Products</h2>
+          <div className="flex flex-wrap justify-evenly jc mt-2 gap-2">
             {products.map((a) => (
               <div className="bg-slate-100" key={a.id}>
-                <div className="shadow-lg w-[220px] wmd border p-4 dark:bg-gray-900">
+                <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
                   <Link className="flex justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
-                      alt=""
+                      alt="img"
                     />
                   </Link>
                   <Link to={`details/${a.id}`}>
@@ -156,7 +153,7 @@ function Home() {
                             fill="#ffffff"
                           />
                         </svg>
-                        <span>{a.price}</span>
+                        <span>${a.price}</span>
                       </div>
                     </button>
                   </div>

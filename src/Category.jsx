@@ -30,7 +30,7 @@ if (!products) {
     <>
       <section className="max-w-[1200px] mx-auto">
         <h2 className="uppercase font-bold mt-2 mx-2">{cid} Products</h2>
-        <div className="flex flex-wrap justify-evenly mt-2 gap-5">
+        <div className="flex flex-wrap justify-evenly jc mt-2 gap-5">
           {products.map((a) => (
             <div className="bg-slate-100" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">

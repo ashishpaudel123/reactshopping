@@ -9,6 +9,7 @@ import logo from "./logo.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdOutlineFavorite } from "react-icons/md";
 import Fav from "./Fav";
+import List from "./List";
 
 function Header() {
   let { state, dispatch } = useContext(CartContext);
@@ -24,7 +25,7 @@ function Header() {
       const header = document.getElementById("head");
       const nav= document.querySelector('nav');
       if (header) {
-        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
           header.style.position = "fixed";
           header.style.top = "0px";
           header.style.width = "100%";
@@ -45,25 +46,6 @@ function Header() {
 
   return (
     <div>
-        
-      {/* <header className='bg-red-700 py-5 text-white'>
-            <div className="max-w-[1200px] mx-auto flex justify-between items-center">
-                <h2 className='font-bold text-center'><Link to={'/'}>SHOP</Link></h2>
-                <div className='flex gap-5'>
-                <Link to='/cart'><FaShoppingCart className='text-[30px]' /> <span className='absolute top-0 right-[18px]  px-2 rounded-full bg-sky-600 text-white rounded'>{state.cart.length}</span></Link>
-                <Link to='/favourite'><MdOutlineFavorite className='text-[30px]' /> </Link>
-                </div>
-
-            </div>
-        </header> */}
-      {/* <nav className='bg-blue-700 py-5 text-white'>
-        <div className="max-w-[1200px] mx-auto">
-            <ul className='flex gap-5 items-center'>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/cart">Cart</Link></li>
-            </ul>
-        </div>
-        </nav> */}
       <header id="head">
           <nav className="bg-slate-300 border-gray-200 dark:bg-gray-900">
             <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center  p-4">
@@ -75,18 +57,18 @@ function Header() {
               <div className="flex items-center space-x-6 rtl:space-x-reverse">
                 <div className="flex gap-7">
                   <Link to="/cart">
-                    <span className="relative">
-                      <FaShoppingCart className="text-[30px] text-[#fc394d]" />{" "}
-                      <span className="absolute top-[-10px] right-[-15px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
+                    <span>
+                      <FaShoppingCart className="relative text-[30px] text-[#fc394d]" />
+                      <span className="absolute top-[9px] right-[60px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
                         {state.cart.length}
                       </span>
                     </span>
                   </Link>
                   
                   <Link to="/fav">
-                    <span className="relative">
-                    <MdOutlineFavorite className="text-[30px] text-[#fc394d] border-[#fc390d]" />{" "}
-                    <span className="absolute top-[-10px] right-[-15px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
+                    <span>
+                    <MdOutlineFavorite className="relative text-[30px] text-[#fc394d] border-[#fc390d]" />
+                    <span className="absolute top-2 right-[0px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
                         {state.favorites.length}
                       </span>
                     </span>
@@ -95,33 +77,8 @@ function Header() {
               </div>
             </div>
           </nav>
-          {/* <nav className="dark:bg-gray-700 bg-slate-100">
-            <div className="max-w-[1200px] mx-auto px-3 ps-0 py-1">
-              <div className="flex items-center">
-                <ul className="flex flex-row overflow-hidden font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-                  <Link to={`/`}>
-                    <a
-                      type="button"
-                      className="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:text-white dark:focus:ring-gray-500 dark:focus:text-white"
-                    >
-                      Home
-                    </a>
-                  </Link>
-                  {cat.slice(0, 8).map((a) => (
-                    <Link to={`/category/${a.slug}`} key={a.slug}>
-                      <a
-                        type="button"
-                        className="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:text-white dark:focus:ring-gray-500  dark:focus:text-white"
-                      >
-                        {a.name}
-                      </a>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </nav> */}
       </header>
+      <List/>
 
       <Routes>
         <Route path="/" element={<Home />} />

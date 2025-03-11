@@ -219,6 +219,16 @@ header nav{
     display: none !important;
   }
 }
+@media (min-width:1200px) {
+.hico .a{
+  position: relative;
+}
+.hico .b{
+  position: relative;
+  top: -45px;
+  left: 20px;
+}
+}
 
 
 

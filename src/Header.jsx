@@ -57,18 +57,18 @@ function Header() {
               <div className="flex items-center space-x-6 rtl:space-x-reverse">
                 <div className="flex gap-7">
                   <Link to="/cart">
-                    <span>
-                      <FaShoppingCart className="relative text-[30px] text-[#fc394d]" />
-                      <span className="absolute top-[9px] right-[60px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
+                    <span className="hico">
+                      <FaShoppingCart className="a relative text-[30px] text-[#fc394d]" />
+                      <span className="absolute b top-[9px] right-[60px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
                         {state.cart.length}
                       </span>
                     </span>
                   </Link>
                   
                   <Link to="/fav">
-                    <span>
-                    <MdOutlineFavorite className="relative text-[30px] text-[#fc394d] border-[#fc390d]" />
-                    <span className="absolute top-2 right-[0px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
+                    <span className="hico">
+                    <MdOutlineFavorite className="a relative text-[30px] text-[#fc394d] border-[#fc390d]" />
+                    <span className="b absolute top-2 right-[0px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
                         {state.favorites.length}
                       </span>
                     </span>

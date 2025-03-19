@@ -94,7 +94,7 @@ function Home() {
         {/* All Products */}
         <div>
           <h2 className="uppercase font-bold m-2">All Products</h2>
-          <div className="flex flex-wrap gap-3 justify-center md:gap-5 mb-8 m-2 jc">
+          <div className="flex flex-wrap gap-2 justify-center md:gap-5 mb-8 m-2 jc">
             {products.map((a) => (
               <div className="bg-slate-100" key={a.id}>
                 <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">

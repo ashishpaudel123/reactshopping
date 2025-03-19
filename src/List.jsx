@@ -38,7 +38,7 @@ function List() {
         <RxHamburgerMenu
           onClick={toggleMenu}
           id="menu-button"
-          className="h-7 dark:text-white w-7 cursor-pointer px-1 md:hidden block"
+          className="h-7 dark:text-white w-7 mx-2 cursor-pointer md:hidden block"
         />
         <div
           className={`${

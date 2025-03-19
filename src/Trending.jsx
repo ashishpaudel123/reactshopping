@@ -57,7 +57,7 @@ function Trending() {
             <div className="bg-slate-100" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
                 <div className="flex justify-center">
-                  <Link to={`details/${a.id}`}>
+                  <Link className="overflow-hidden" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
@@ -124,7 +124,7 @@ function Trending() {
           {laptops.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
-                  <Link className="flex justify-center" to={`details/${a.id}`}>
+                  <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
@@ -190,7 +190,7 @@ function Trending() {
           {smartphones.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
-                  <Link className="flex justify-center" to={`details/${a.id}`}>
+                  <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
@@ -256,7 +256,7 @@ function Trending() {
           {top.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
-                  <Link className="flex justify-center" to={`details/${a.id}`}>
+                  <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
@@ -322,7 +322,7 @@ function Trending() {
           {groceries.slice(0, 6).map((a) => (
             <div className="bg-slate-100 mobile-dn" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
-                  <Link className="flex justify-center" to={`details/${a.id}`}>
+                  <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}

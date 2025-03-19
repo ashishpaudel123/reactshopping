@@ -16,7 +16,6 @@ let cartReducer = (state, action) => {
 };
 
 let CartContext = createContext();
-
 export let CartProvider = ({ children }) => {
     let [state, dispatch] = useReducer(cartReducer, { cart: [], favorites: [] });
     return (

@@ -35,7 +35,7 @@ if (!products) {
             <div className="bg-slate-100" key={a.id}>
               <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
                 <div className="flex justify-center">
-                  <Link to={`details/${a.id}`}><img className="w-[150px] hover:scale-[1.2] transition duration-500" src={a.thumbnail} alt="" /></Link>
+                  <Link className="overflow-hidden" to={`details/${a.id}`}><img className="w-[150px] hover:scale-[1.2] transition duration-500" src={a.thumbnail} alt="" /></Link>
                   </div>
                   <Link to={`details/${a.id}`}><p className="font-bold l1 hover:underline hover:text-blue-700 my-1 dark:text-white">{a.title}</p></Link>
                   <div className="flex justify-between">

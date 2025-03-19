@@ -97,10 +97,10 @@ function Home() {
           <div className="flex flex-wrap justify-evenly jc mt-2 gap-2">
             {products.map((a) => (
               <div className="bg-slate-100" key={a.id}>
-                <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
-                  <Link className="flex justify-center" to={`details/${a.id}`}>
+                <div className="shadow-lg  wmd w-[220px] border p-4 dark:bg-gray-900">
+                  <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
-                      className="w-[150px] hover:scale-[1.2] transition duration-500"
+                      className="w-[150px]  hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
                       alt="img"
                     />

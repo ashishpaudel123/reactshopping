@@ -47,7 +47,7 @@ function Header() {
   return (
     <div>
       <header id="head">
-          <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 border-gray-200  dark:bg-gray-900 py-3">
+          <nav className="bg-sky-300 border-gray-200  dark:bg-gray-900 py-3">
             <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center">
               <Link to={`/`}>
                 <a className="flex items-center">
@@ -58,7 +58,7 @@ function Header() {
                   <Link to="/cart">
                     <span className="hico relative">
                       <FaShoppingCart className="a text-[30px] text-[#eb0e28]" />
-                      <span className="absolute b  bottom-6 left-6 px-[5px] rounded-full bg-orange-400 text-white text-[12px]">
+                      <span className="absolute b  bottom-5 left-6 px-[5px] rounded-full bg-orange-400 text-white text-[12px]">
                         {state.cart.length}
                       </span>
                     </span>

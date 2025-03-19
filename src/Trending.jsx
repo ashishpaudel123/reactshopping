@@ -51,11 +51,11 @@ function Trending() {
   return (
     <>
       <section className="max-w-[1200px] mx-auto">
-        <h2 className="uppercase font-bold m-2">Trending Products</h2>
-        <div className="flex flex-wrap justify-evenly jc mt-2 gap-2">
+        <h2 className="uppercase font-bold my-2 px-2">Trending Products</h2>
+        <div className="flex flex-wrap justify-center jc mx-2 my-2 gap-3 md:gap-5">
           {beauty.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
-              <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
+              <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">
                 <div className="flex justify-center">
                   <Link className="overflow-hidden" to={`details/${a.id}`}>
                     <img
@@ -123,7 +123,7 @@ function Trending() {
 
           {laptops.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
-              <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
+              <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">
                   <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
@@ -189,7 +189,7 @@ function Trending() {
 
           {smartphones.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
-              <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
+              <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">
                   <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
@@ -255,7 +255,7 @@ function Trending() {
 
           {top.slice(0, 1).map((a) => (
             <div className="bg-slate-100" key={a.id}>
-              <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
+              <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">
                   <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"
@@ -321,7 +321,7 @@ function Trending() {
 
           {groceries.slice(0, 6).map((a) => (
             <div className="bg-slate-100 mobile-dn" key={a.id}>
-              <div className="shadow-lg wmd w-[220px] border p-4 dark:bg-gray-900">
+              <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">
                   <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
                     <img
                       className="w-[150px] hover:scale-[1.2] transition duration-500"

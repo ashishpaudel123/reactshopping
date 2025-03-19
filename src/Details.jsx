@@ -29,7 +29,7 @@ function Details() {
   return (
     <>
       <section className="bg-gray-200 max-w-[1200px] p-2">
-        <div className="container mx-auto flex flex-wrap justify-center gap-5">
+        <div className="flex flex-wrap justify-center my-5 gap-5">
             <div className="shadow-lg rounded bg-white">
           {details.map((a) => (
             <div key={a.id} className="p-2">

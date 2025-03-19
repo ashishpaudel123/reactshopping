@@ -49,7 +49,7 @@ function Home() {
     <>
       <section className="max-w-[1200px] mx-auto">
         {/* swipper start */}
-      <div className="h-auto max-w-full">
+      <div className="h-auto px-2 max-w-full">
             <Swiper
               autoplay={true}
               loop={true}
@@ -94,13 +94,13 @@ function Home() {
         {/* All Products */}
         <div>
           <h2 className="uppercase font-bold m-2">All Products</h2>
-          <div className="flex flex-wrap justify-evenly jc mt-2 gap-2">
+          <div className="flex flex-wrap gap-3 justify-center md:gap-5 mb-8 m-2 jc">
             {products.map((a) => (
               <div className="bg-slate-100" key={a.id}>
-                <div className="shadow-lg  wmd w-[220px] border p-4 dark:bg-gray-900">
-                  <Link className="flex overflow-hidden justify-center" to={`details/${a.id}`}>
+                <div className="shadow-lg rounded wmd w-[220px] border p-4 dark:bg-gray-900">
+                  <Link className="flex justify-center" to={`details/${a.id}`}>
                     <img
-                      className="w-[150px]  hover:scale-[1.2] transition duration-500"
+                      className="w-[150px] hover:scale-[1.2] transition duration-500"
                       src={a.thumbnail}
                       alt="img"
                     />

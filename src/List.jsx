@@ -17,28 +17,28 @@ function List() {
 
   return (
     <>
+    <div className="bg-slate-100
+                dark:bg-gray-800
+                dark:text-white">
       <nav
         className="
-                bg-slate-100
-                dark:bg-gray-800
-                dark:text-white
+                  mx-auto
+                  max-w-[1200px]
                 flex flex-wrap
                 items-center
                 justify-between
-                md:py-2
-                px-5
-                py-1
                 my-1
+
                 text-lg text-gray-700
             "
       >
-        <div className="md:hidden block font-bold">
-          <Link to={`/`}>Home</Link>
+        <div className="md:hidden block px-2">
+          <Link className="dark:text-white text-gray-700" to={`/`}>Home</Link>
         </div>
         <RxHamburgerMenu
           onClick={toggleMenu}
           id="menu-button"
-          className="h-6 w-6 cursor-pointer md:hidden block"
+          className="h-7 dark:text-white w-7 cursor-pointer px-1 md:hidden block"
         />
         <div
           className={`${
@@ -48,16 +48,17 @@ function List() {
         >
           <ul
             className="dark:text-white
-                        pt-4
                         text-base text-gray-700
                         md:flex
                         md:justify-between 
                         md:pt-0
+                        items-center
                         "
-          >
+          > 
+          <Link to={`/`} className="hidden md:block py-2 ps-1 text-nowrap fs12 font-medium border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white">Home </Link>
             {cat.slice(0, 6).map((a) => (
-              <li className="listmobilegap" key={a.slug}>
-                <Link to={`/category/${a.slug}`} className="px-4 py-2 text-nowrap fs12 font-medium border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+              <li className="listmobilegap " key={a.slug}>
+                <Link to={`/category/${a.slug}`} className="px-4 py-2 text-nowrap fs12 font-medium border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white">
                   {a.name}
                 </Link>
               </li>
@@ -78,6 +79,7 @@ function List() {
           </ul>
         </div>
       </nav>
+      </div>
     </>
   );
 }

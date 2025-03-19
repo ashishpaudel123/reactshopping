@@ -47,34 +47,32 @@ function Header() {
   return (
     <div>
       <header id="head">
-          <nav className="bg-slate-300 border-gray-200 dark:bg-gray-900">
-            <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center  p-4">
+          <nav className="light:bg-gradient border-gray-200 dark:bg-gray-900 py-2">
+            <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center">
               <Link to={`/`}>
-                <a className="flex items-center space-x-3 rtl:space-x-reverse">
+                <a className="flex items-center">
                   <img src={logo} className="h-8" alt="Logo" />
                 </a>
               </Link>
-              <div className="flex items-center space-x-6 rtl:space-x-reverse">
-                <div className="flex gap-7">
+                <div className="flex gap-7 mx-4">
                   <Link to="/cart">
-                    <span className="hico">
-                      <FaShoppingCart className="a relative text-[30px] text-[#eb0e28]" />
-                      <span className="absolute b top-[9px] right-[60px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
+                    <span className="hico relative">
+                      <FaShoppingCart className="a text-[30px] text-[#eb0e28]" />
+                      <span className="absolute b  bottom-6 left-6 px-[5px] rounded-full bg-orange-400 text-white text-[12px]">
                         {state.cart.length}
                       </span>
                     </span>
                   </Link>
                   
                   <Link to="/fav">
-                    <span className="hico">
-                    <MdOutlineFavorite className="a relative text-[30px] text-[#eb0e28] border-[#eb0e28]" />
-                    <span className="b absolute top-2 right-[0px]  px-2 rounded-full bg-sky-600 text-white text-[12px]">
+                    <span className="hico relative">
+                    <MdOutlineFavorite className="a text-[30px] text-[#eb0e28]" />
+                    <span className="b absolute bottom-5 left-6  px-[5px] rounded-full bg-orange-400 text-white text-[12px]">
                         {state.favorites.length}
                       </span>
                     </span>
                   </Link>
                 </div>
-              </div>
             </div>
           </nav>
       </header>

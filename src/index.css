@@ -24,7 +24,12 @@
       rgba(68, 36, 164, 1) 99.9%
     );
   }
-  
+  .bg-gradient{
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
   .default-btn,
   .hover-btn {
     display: -webkit-box;
@@ -222,6 +227,10 @@ header nav{
 @media (min-width:1200px) {
 .hico .a{
   position: relative;
+}
+.hico{
+  position: relative;
+  top: 12px;
 }
 .hico .b{
   position: relative;
